@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Router;
 
 use App\Container;
+use App\Response\Response;
 
 abstract class AbstractRouter
 {
@@ -12,4 +13,6 @@ abstract class AbstractRouter
     {
         return (new Container($class))->resolveClass();
     }
+
+    abstract public function execute(): Response;
 }

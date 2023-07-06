@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Response;
 
-abstract class AbstractResponse
+use App\Response\Response;
+
+abstract class AbstractResponse implements Response
 {
     public function __construct(
         private readonly string $response,
